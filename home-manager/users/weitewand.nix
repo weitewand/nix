@@ -24,6 +24,8 @@
     ./../../alacritty;
   home.file.".zshrc".source =
     ./../../zsh/.zshrc;
+
+  # Git config
   programs.git = {
     enable = true;
     settings = {
@@ -35,5 +37,10 @@
       push.autoSetupRemote = true;
     };
     ignores = [ ".DS_Store" ];
+  };
+
+  # VSCode
+  programs.vscode = {
+    enable = true;
   };
 }
