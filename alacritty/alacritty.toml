@@ -1,0 +1,6 @@
+[general]
+import = ["~/.config/alacritty/themes/onedark.toml"]
+
+[font.normal]
+family = "GeistMono Nerd Font"
+style = "Medium"
