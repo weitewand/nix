@@ -3,8 +3,6 @@
 {
   nix.enable = false;
 
-  nixpkgs.hostPlatform = "aarch64-darwin";
-
   # In order to have VSCode managed by nix:
   nixpkgs.config.allowUnfree = true;
 
