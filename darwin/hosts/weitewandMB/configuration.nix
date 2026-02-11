@@ -1,4 +1,3 @@
-
 { config, pkgs, systemRevision, ... }:
 
 {
@@ -29,6 +28,8 @@
     pkgs.neovim 
     pkgs.lazygit
     pkgs.eza
+    pkgs.docker
+    pkgs.docker-compose
   ];
   
   # Declare the user that will be running `nix-darwin`.
@@ -53,11 +54,19 @@
 
     taps =[];
     brews = [ "cowsay" ];
-    casks = [];
+    casks = [ 
+      "signal" 
+      "docker"
+    ];
   };
 
   # Install fonts:
   fonts.packages = [
     pkgs.nerd-fonts.geist-mono
   ];
+
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToEscape = true;
+  };
 }

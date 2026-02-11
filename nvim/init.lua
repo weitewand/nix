@@ -11,5 +11,5 @@ require "fterm"
 -- indent-blankline
 require "indentblankline"
 
--- nerdtree
-require "nerdtree"
+-- neo-tree
+require "neo-tree"

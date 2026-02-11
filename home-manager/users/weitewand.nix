@@ -7,7 +7,9 @@
   # Let home-manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [];
+  home.packages = [
+    pkgs.uv
+  ];
 
   home.username = "weitewand";
   home.homeDirectory = "/Users/weitewand";
@@ -42,5 +44,19 @@
   # VSCode
   programs.vscode = {
     enable = true;
+  };
+  # neovim
+  programs.neovim = {
+    enable = true;
+
+    # Use built-in package manager support
+    plugins = [
+      pkgs.vimPlugins.which-key-nvim
+      pkgs.vimPlugins.indent-blankline-nvim
+      pkgs.vimPlugins.neo-tree-nvim
+      pkgs.vimPlugins.plenary-nvim
+      pkgs.vimPlugins.nui-nvim
+      pkgs.vimPlugins.nvim-web-devicons
+    ];
   };
 }

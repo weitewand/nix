@@ -24,13 +24,13 @@ whichkey.register({
 	g = {
 		name = "Git", -- optional group name
 		g = { "<cmd>lua _lazygitTerminal()<cr>", "Lazygit" }, -- create a binding with label
-		f = { "<cmd>lua print('Hello')<cr>", "Guten Tag" }, 
 		r = { "<cmd>lua _test()<cr>", "Guten Tag" }, 
     		-- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = 123 }, -- additional options for creating the keymap
     		-- n = { "New File" }, -- just a label. don't create any mapping
     		-- e = "Edit File", -- same as above
     		-- ["1"] = "which_key_ignore",  -- special label to hide it in the popup
     		-- b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
-  },
+    	},
+	f = { "<cmd>Neotree<cr>", "Neo-tree" }, 
 }, { prefix = "<leader>" })
 
