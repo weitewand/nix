@@ -1,0 +1,37 @@
+my-flake/
+├── flake.nix
+├── flake.lock
+│
+├── hosts/
+│   ├── macbook/
+│   │   ├── configuration.nix
+│   │   └── hardware.nix (optional)
+│   │
+│   └── rpi5/
+│       ├── configuration.nix
+│       └── hardware.nix
+│
+├── modules/
+│   ├── nixos/
+│   │   ├── common.nix
+│   │   ├── networking.nix
+│   │   └── users.nix
+│   │
+│   ├── darwin/
+│   │   └── common.nix
+│   │
+│   └── shared/
+│       ├── git.nix
+│       ├── ssh.nix
+│       └── shell.nix
+│
+└── home/
+    ├── home.nix
+    ├── macbook.nix
+    ├── rpi5.nix
+    └── programs/
+        ├── zsh.nix
+        ├── tmux.nix
+        ├── neovim.nix
+        └── git.nix
+

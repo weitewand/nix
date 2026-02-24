@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+ { config, pkgs, ... }:
 
 {
   # this is internal compatibility configuration 
@@ -9,6 +9,16 @@
 
   home.packages = [
     pkgs.uv
+    #pkgs.texliveMedium
+    (pkgs.texlive.combine {
+    inherit (pkgs.texlive)
+      fontawesome5
+      textpos
+      scheme-small
+      latexmk
+      biblatex
+      biber;
+    })
   ];
 
   home.username = "weitewand";
@@ -19,13 +29,13 @@
   };
 
   home.file.".config/nvim".source =
-    ./../../nvim;
+    ./home-manager/programs/nvim;
   home.file.".config/lazygit".source =
-    ./../../lazygit;
+    ./home-manager/programs/lazygit;
   home.file.".config/alacritty".source =
-    ./../../alacritty;
+    ./home-manager/programs/alacritty;
   home.file.".zshrc".source =
-    ./../../zsh/.zshrc;
+    ./home-manager/programs/zsh/.zshrc;
 
   # Git config
   programs.git = {

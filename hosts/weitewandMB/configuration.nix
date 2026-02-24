@@ -28,6 +28,9 @@
     pkgs.eza
     pkgs.docker
     pkgs.docker-compose
+    pkgs.zstd
+    pkgs.nmap
+    pkgs.tree
   ];
   
   # Declare the user that will be running `nix-darwin`.
@@ -55,6 +58,7 @@
     casks = [ 
       "signal" 
       "docker"
+      "skim"
     ];
   };
 

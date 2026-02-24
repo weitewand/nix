@@ -1,0 +1,53 @@
+nix-darwin-config
+├── alacritty
+│   ├── alacritty.toml
+│   └── themes
+│       └── onedark.toml
+├── darwin
+│   └── hosts
+│       ├── homepi
+│       │   └── configuration.nix
+│       └── weitewandMB
+│           └── configuration.nix
+├── flake.lock
+├── flake.nix
+├── folder-structure-act.txt
+├── folder-structure-rec.txt
+├── home-manager
+│   └── users
+│       └── weitewand.nix
+├── lazygit
+│   └── config.yml
+├── nvim
+│   ├── README.md
+│   ├── autoload
+│   │   └── onedark.vim
+│   ├── colors
+│   │   └── onedark.vim
+│   ├── fterm.lua
+│   ├── init.lua
+│   ├── initOld.vim
+│   ├── lua
+│   │   ├── basics.lua
+│   │   ├── fterm.lua
+│   │   ├── indentblankline.lua
+│   │   ├── neo-tree.lua
+│   │   ├── toggleterm.lua
+│   │   └── whichkey.lua
+│   └── pack
+│       ├── plugins
+│       │   └── start
+│       │       ├── fterm.nvim
+│       │       ├── indent-blankline.nvim
+│       │       ├── nerdtree
+│       │       ├── nerdtree-git-plugin
+│       │       ├── onedark.nvim
+│       │       └── which-key.nvim
+│       └── tags
+├── result -> /nix/store/mr9nfqz2y4hg0y7sg2gfdh8pqbg642kj-Skim-1.7.9
+├── result-man -> /nix/store/iwlvhvfm0f1j5mv6mq5xvdni3d4gbpbw-skim-2.0.2-man
+├── secrets
+│   └── wifi.nix
+└── zsh
+
+27 directories, 24 files
