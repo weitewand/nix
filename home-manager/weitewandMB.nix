@@ -29,13 +29,13 @@
   };
 
   home.file.".config/nvim".source =
-    ./home-manager/programs/nvim;
+    ./programs/nvim;
   home.file.".config/lazygit".source =
-    ./home-manager/programs/lazygit;
+    ./programs/lazygit;
   home.file.".config/alacritty".source =
-    ./home-manager/programs/alacritty;
+    ./programs/alacritty;
   home.file.".zshrc".source =
-    ./home-manager/programs/zsh/.zshrc;
+    ./programs/zsh/.zshrc;
 
   # Git config
   programs.git = {

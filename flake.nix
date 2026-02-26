@@ -37,7 +37,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.verbose = true;
-          home-manager.users.weitewand = import ./home/weitewandMB.nix;
+          home-manager.users.weitewand = import ./home-manager/weitewandMB.nix;
         }
       ];
     };
