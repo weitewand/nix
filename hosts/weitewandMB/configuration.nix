@@ -45,9 +45,6 @@
   # Set Git commit hash for darwin-version.
   system.configurationRevision = systemRevision;
 
-  # Create /etc/zshrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;
- 
   homebrew = {
     enable = true;
     # remove packages that are not defined here to make it declarative:

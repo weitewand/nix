@@ -1,22 +1,13 @@
 
 { config, pkgs, ... }:
 
-let
-  secrets = import ./secrets/wifi.nix
-in
 {
   #########################
   # Basic system settings #
   #########################
 
   networking = {
-    hostname = "homepi";
     wireless.enable = true;
-    wireless.networks = {
-      "FooFighters_EXT" = {
-        psk = secrets.wifiPassword;
-      };
-    useDHCP = true;
     };
  
   # Enable OpenSSH server
@@ -34,20 +25,14 @@ in
   ###################
   # Users & Sudo    #
   ###################
-  users.users.nix = {
+  users.users.weitewand = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # allows sudo
-    initialPassword = "changeme"; # change this after first login
+    shell = pkgs.zsh;
   };
 
   # Let wheel group use sudo without password
   security.sudo.wheelNeedsPassword = false;
-
-  ##########################
-  # Bootloader & firmware  #
-  ##########################
-  boot.loader.generic-extlinux-compatible.enable = true;
-  hardware.enableRedistributableFirmware = true;
 
   #####################
   # System state version
