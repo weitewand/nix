@@ -7,20 +7,24 @@
   #########################
 
   networking = {
-    wireless.enable = true;
+    networkmanager.enable = true;
     };
  
   # Enable OpenSSH server
   services.openssh.enable = true;
 
   # Allow password authentication (initial setup)
-  services.openssh.passwordAuthentication = true;
+  services.openssh.settings.PasswordAuthentication = true;
 
   # Optional: extra SSH configuration
   services.openssh.extraConfig = ''
     PermitRootLogin no
     PubkeyAuthentication yes
   '';
+  
+  swapDevices = [
+    { device = "/swapfile"; size = 2048; }
+  ];
 
   ###################
   # Users & Sudo    #
